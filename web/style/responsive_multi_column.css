@@ -1,0 +1,54 @@
+
+/* All of myStyle.css applies to Mobile and Desktop */
+
+/* New styling for Mobile and Desktop */
+
+.row {
+    box-sizing: border-box;  /* width of element includes padding (it's not extra) */ 
+    width: 100%;
+    padding: 2ex 2ex;  /* 1st is top/bottom, 2nd is left/right */
+    /* background-color: rgb(160, 200, 180); /* this is the turqoise color of he body */
+    background-color: rgb(180, 220, 200); /* this is lighter than the body's turqoise color */
+    margin-bottom: 2ex;  /* the space between sections */
+}
+
+.column {
+    box-sizing: border-box;  /* width of element includes padding (it's not extra) */ 
+    padding: 1ex 1ex; /* 1st is top/bottom, 2nd is left/right */
+}
+
+.column img {
+    width:100%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+
+/* ------------ Desktop Only Styles --------------- */
+@media screen and (min-width: 600px) {
+
+    .column {
+        float: left;
+     }
+
+    .column25 {
+        width: 25%;
+    }
+    .column33 {
+        width: 33%;
+    }
+    .column50 {
+        width: 50%;
+    }
+    .column66 {
+        width: 66%;
+    }
+    .column75 {
+        width: 75%;
+    }
+
+    .stopFloat { /* prevents elements below stopFloat from floating up above the stopFloat */
+        clear: both;
+    }
+
+} /* Closes off the Media Query (group of Styles) */

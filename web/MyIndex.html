@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Use this type of comment within HTML -->
+        <title>Marob Capital</title>
+
+        <link href="style/myStyleSheet.css" rel="stylesheet" type="text/css" />  
+        <link href="style/_dropdownStyle.css" rel="stylesheet" type="text/css" />  
+         <link href="style/responsive_multi_column.css" rel="stylesheet" type="text/css" />  
+        <link href="style/clickSort.css" rel="stylesheet" type="text/css" />  
+        <link href="style/slideShowStyle.css" rel="stylesheet" type="text/css" />  
+
+    </head>
+    <body>
+
+        <div id="titleNav">
+            <div id="pageTitle">
+                Marob Capital Investments
+            </div>
+
+            <div id="nav">
+                <div class="dropdown">
+                    <a href="#/home"> Home </a>
+                </div>
+                <div class="dropdown">
+                     <a href="#/apply"> Apply </a>
+                </div>
+                <div class="dropdown">
+                    <img class="dropHeader" onclick="myDropdown.toggle(this)"   title="Search" src="icons/dark/search_dd_icon_H24.png" alt="Search" >
+                    <div class="dropContent" id="searchDropDown">
+                        <a href="#/users"> Users </a><br/>
+                        <a href="#/applicant"> Employees </a><br/>
+                        <a href="#/slideShow"> Slide Show </a><br/>
+                        <a href="#/logon"> Log on </a><br/>
+                        <a href="#/logoff"> Log off </a><br/>
+                        <a href="#/profile"> Profile </a><br/>
+                        <a>Information</a> <br/>
+                        <a>Investors</a> 
+                    </div>
+                </div>        
+                <div class="dropdown">
+                    <a href ="#/blog"> Blog </a>
+                </div>
+            </div>
+            </div>
+         <!-- end of titleNav -->
+        <div id="content">
+            
+        </div>
+        <div id="footer">
+            Zach Adams
+           
+        </div>
+         
+         <script src="js/ajax.js"></script>
+         <script src="js/ajax2.js"></script>
+          <script src="js/MakeTableBuilder.js"></script>
+         <script src ="js/routeFw.js"></script>
+         <script src ="js/dropdownFw.js "></script>
+         <script src ="js/components/blog.js"></script>
+         <script src="js/components/home.js"></script>
+         <script src="js/components/applicant.js"></script>
+         <script src="js/components/users.js"></script>
+         <script src="js/components/apply.js"></script>
+         <script src="js/components/slideShow.js"></script>
+         <script src="js/components/MakeSlideShow.js"></script>
+         <script src="js/components/logon.js"></script>
+         <script src="js/components/logoff.js"></script>
+         <script src="js/components/profile.js"></script>
+         <script src="js/CRUD_icons.js"></script>   
+         <script src="js/Utils.js"></script>
+         <script>
+                   
+                       "use strict";
+                        var myRoutes = [];
+                        myRoutes['/'] = home;
+                        myRoutes['/home'] = home;
+                        myRoutes['/blog'] = blog;
+                        myRoutes['/applicant'] = applicant.list;
+                        myRoutes['/users'] = users.list; 
+                        myRoutes['/apply'] = apply;
+                        myRoutes['/slideShow'] = slideShow;
+                        myRoutes['/logon'] = logon.UI;
+                        myRoutes['/logoff'] = logoff;
+                        myRoutes['/profile'] = profile.list;
+                        myRoutes['/employeeInsert'] = applicant.insertUI;
+                        myRoutes['/userInsert'] = users.insertUI;
+                        myRoutes['/userUpdate'] = users.updateUI;
+                        
+                        var myRoutes = routeFw({
+                            routeArray: myRoutes,
+                            contentId: "content"
+                        });
+                        
+                        myRoutes.printRoutes();
+                        var myDropdown = dropDownFw({
+                            dropContentStyle: "dropContent",
+                            hiddenRight: "-500px ",
+                        });
+                        var tableBuilder = MakeTableBuilder("icons/sortUpDown16.png");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+/*  Use ONLY the "slash star ... star slash" style comment inside a style sheet */
+
+/* Don't want tiny white border inside browser window - apply to html and body. */
+html, body {  
+    margin:0; 
+    padding:0; 
+}
+
+body { 
+    background-color: white; /* this is grey that shows through the content area */
+    color: black;  /* color of font */
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; /* no tail font is more readable for small font */
+    font-size:16px;
+}
+
+#titleNav { /* titleNav is fixed, always at the top */
+
+    /* position fixed removes the element from the normal flow, placing it where you specify with top/bottom, left/right */
+    position:fixed; 
+    top:0px;
+    left:0px;
+    z-index: 1;     /* To make sure titleNav is on top of content, give it a higher z-index than content 
+                    (content would have default value of zero). */
+    width: 100%;    
+
+    background-color:darkgray;
+
+    padding-bottom: 10px; 
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px black;  /* give a little "3D"  effect to the bottom of the title area */
+
+    min-width: 650px; /* stop nav bar from unwanted overlap with title */
+
+}
+
+
+#pageTitle { /* no change */
+    padding:12px;
+    padding-bottom: 0px; 
+    font-size:36px;
+    font-family: helvetica;
+    letter-spacing: 2.5px; /* spaces out letters a bit */
+    float: left; 
+}
+
+#nav { /* fix the nav bar */
+    float:right;
+    font-size:15px;
+    padding-top:30px;
+    font-style: italic;
+    color: lightgreen
+}
+
+
+#nav a {  /* no change */
+    text-decoration:none;  /* Do not want links in "nav" to be underlined */
+    color: #C8C8C8; /* light gray: to provide color for links, you have to style the "a" tag */
+}
+
+#content {  /* Added padding top and bottom to prevent top/bottom content from getting hidden under titleNav/footer */ 
+
+    position: relative;
+    padding:12px;
+    padding-top: 100px; /* prevent the top of the content from getting hidden under the fixed titleNav */
+    padding-bottom: 40px; /* prevent the the bottom of the content from getting hidden under the fixed footer */
+
+}
+
+#footer { /* footer fixed, always at the bottom */
+    position: fixed;
+    bottom: 0px; 
+    left: 0px; 
+    z-index: 1; /* make sure footer is on top of content which would have default z-index value of 0 */
+
+    background-color:beige;
+    color: black; 
+    width:100%;
+    text-align:center;
+    padding:8px;	
+
+    box-shadow: 0px 0px 5px black;  /* give a little "3D"  effect to the top of the footer area */
+
+}

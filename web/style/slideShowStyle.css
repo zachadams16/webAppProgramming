@@ -1,0 +1,19 @@
+.picContainer{
+    text-align:center;
+    font-weight:bold; 
+}
+
+.picContainer img { /* style images that are inside of class picContainer */
+    width: 33%;
+    border: 3px inset graytext;
+    border-radius:8px;
+}
+.picContainer .caption {
+    padding-bottom: 1ex;    
+}
+
+.picContainer button {
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
